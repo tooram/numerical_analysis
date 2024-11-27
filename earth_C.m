@@ -64,6 +64,7 @@ for k = 2:max_iter
     end
 end
 
+<<<<<<< HEAD
 % 使用最后计算的 Romberg 值计算轨道周长
 C_romberg =T(k, k);
 
@@ -75,3 +76,12 @@ fprintf('\n比较结果：\n');
 fprintf('Romberg 方法计算的轨道周长为：%.7f km\n', C_romberg);
 fprintf('MATLAB 内置数值积分计算的轨道周长为：%.7f km\n', C_builtin);
 fprintf('误差为：%.7e km\n', abs(C_romberg - C_builtin));
+=======
+% 关闭日志文件
+fclose(log_file);
+
+% 显示最终结果
+final_result = R_table(k, k);
+fprintf('积分结果为: %.10f\n', final_result);
+fprintf('详细计算过程已保存到文件: romberg_integration_log.txt\n');
+>>>>>>> 9a67743d97c230dfed7634b5611296bb9837c2e4
